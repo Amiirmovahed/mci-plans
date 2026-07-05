@@ -66,7 +66,6 @@ body {
   position: relative; overflow-x: hidden;
 }
 
-/* رفع باگ اسکرول مودال در iOS Safari */
 body.modal-open {
   position: fixed;
   width: 100%;
@@ -150,7 +149,6 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; color: #FFD54F; }
 html[data-theme="dark"] .stat-value { color: var(--mci-blue-light); }
 .stat-label { font-size: 10px; color: var(--text-muted); margin-top: 5px; font-weight: 500; }
 
-/* اصلاح تداخل استایل تب‌ها با افزایش Specificity */
 .tabs {
   display: flex; background: var(--accent-bg); border: 1px solid var(--card-border);
   border-radius: 14px; padding: 4px; margin-bottom: 18px; backdrop-filter: blur(8px);
@@ -225,7 +223,6 @@ html[data-theme="dark"] .feature svg { color: var(--mci-blue-light); }
 html[data-theme="dark"] .view-btn { color: var(--mci-blue-light); }
 .plan:hover .view-btn { background: var(--mci-blue); color: white; transform: translateX(-3px); }
 
-/* ==================== مودال ==================== */
 .modal-overlay {
   position: fixed; inset: 0; background: rgba(5, 10, 25, 0.6);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
@@ -279,7 +276,6 @@ html[data-theme="dark"] .hero-network { color: var(--mci-blue-light); }
 .info-item .info-label { font-size: 11px; color: var(--text-secondary); margin-bottom: 4px; font-weight: 700; }
 .info-item .info-value { font-size: 14px; font-weight: 800; color: var(--text-primary); }
 
-/* باکس اطلاع‌رسانی مودم */
 .modem-note {
   background: linear-gradient(135deg, rgba(255, 102, 0, 0.08), rgba(33, 150, 243, 0.08));
   border: 1px solid rgba(255, 102, 0, 0.3);
@@ -307,7 +303,7 @@ html[data-theme="dark"] .hero-network { color: var(--mci-blue-light); }
   cursor: pointer; font-family: inherit; transition: all 0.3s;
   box-shadow: 0 8px 20px rgba(0, 102, 204, 0.35);
   display: flex; align-items: center; justify-content: center; gap: 8px;
-  text-decoration: none; /* اضافه شدن برای تگ a */
+  text-decoration: none;
 }
 .cta-button:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0, 102, 204, 0.5); }
 .cta-button:active { transform: translateY(0); }
@@ -375,7 +371,7 @@ html[data-theme="dark"] .hero-network { color: var(--mci-blue-light); }
 
   <div class="title-section">
     <h2>بسته‌های اینترنت <span class="accent">4G & 5G مودم</span></h2>
-    <p>طرح متنوع اینترنت پرسرعت مودم همراه اول برای مشترکین گرامی</p>
+    <p>اینترنت پرسرعت همراه اول، برای تمام نیاز‌های شما</p>
   </div>
 
   <div class="stats">
@@ -419,11 +415,9 @@ html[data-theme="dark"] .hero-network { color: var(--mci-blue-light); }
 </div>
 
 <script>
-// ==================== داده‌های بسته‌ها (نسخه مشترکین) ====================
 const plans = [
-  // --- 4G Plans ---
   { id: 1, type: '4g', data: 80, dataUnit: 'گیگابایت', duration: 30, network: '4G', price: 200000, speed: 'تا ۳۰۰ مگابیت بر ثانیه', tag: 'اقتصادی',
-    features: ['مناسب برای استفاده روزمره', 'مرور وب و شبکه‌های اجتماعی', 'تماس تصویری با کیفیت استاندارد', 'قابل استفاده در تمام مودم‌های 4G', 'فعال‌سازی آنی پس از خرید'] },
+    features: ['مناسب برای استفاده روزمره', 'مرور وب و شبکه‌های اجتماعی', 'تماس تصویری با کیفیت استاندارد', 'قابل استفاده در تمام مودم‌های 4G'] },
   { id: 2, type: '4g', data: 100, dataUnit: 'گیگابایت', duration: 60, network: '4G', price: 250000, speed: 'تا ۳۰۰ مگابیت بر ثانیه', tag: 'محبوب',
     features: ['مناسب برای خانواده‌های کوچک', 'استریم ویدیو با کیفیت HD', 'دانلود فایل‌های متوسط', 'اعتبار ۶۰ روزه', 'قابل استفاده در تمام مودم‌های 4G'] },
   { id: 3, type: '4g', data: 125, dataUnit: 'گیگابایت', duration: 60, network: '4G', price: 300000, speed: 'تا ۳۰۰ مگابیت بر ثانیه', tag: 'پرفروش',
@@ -433,7 +427,6 @@ const plans = [
   { id: 5, type: '4g', data: 200, dataUnit: 'گیگابایت', duration: 90, network: '4G', price: 500000, speed: 'تا ۳۰۰ مگابیت بر ثانیه', tag: 'حرفه‌ای',
     features: ['مناسب برای کسب‌وکار و استفاده سنگین', 'استریم ویدیو با کیفیت 4K', 'پشتیبانی از چند دستگاه همزمان', 'اعتبار ۹۰ روزه', 'بالاترین اولویت در پهنای باند'] },
 
-  // --- 5G Plans ---
   { id: 6, type: '5g', data: 500, dataUnit: 'گیگابایت', duration: 120, network: '5G', price: 2000000, speed: 'تا ۱ گیگابیت بر ثانیه', tag: 'نیمه‌سالانه',
     features: ['مناسب برای استفاده نیمه‌سنگین 5G', 'استریم ویدیو با کیفیت 4K و 8K', 'گیمینگ آنلاین با پینگ بسیار پایین', 'اعتبار ۱۲۰ روزه', 'قابل استفاده در مودم‌های 5G'] },
   { id: 7, type: '5g', data: 600, dataUnit: 'گیگابایت', duration: 180, network: '5G', price: 2400000, speed: 'تا ۱ گیگابیت بر ثانیه', tag: 'یک ساله',
@@ -467,7 +460,6 @@ function renderPlans(type) {
     const card = document.createElement('div');
     card.className = 'plan';
     card.dataset.id = plan.id;
-    // استفاده از dir="ltr" برای جلوگیری از به‌هم‌ریختگی متن ترکیبی
     card.innerHTML = `
       <div class="plan-top">
         <div class="plan-data">
@@ -591,12 +583,12 @@ function openModal(plan) {
     </a>
   `;
   modalOverlay.classList.add('active');
-  document.body.classList.add('modal-open'); // قفل اسکرول بک‌گراند
+  document.body.classList.add('modal-open');
 }
 
 function closeModal() {
   modalOverlay.classList.remove('active');
-  document.body.classList.remove('modal-open'); // رفع قفل اسکرول
+  document.body.classList.remove('modal-open');
 }
 
 modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
